@@ -1,0 +1,40 @@
+#category-show-vbc
+  .row
+    .col-sm-8
+      #tab-list.row
+        /! Nav tabs
+        ul.nav.nav-tabs role="tablist" 
+          li.col-sm-6 role="presentation"
+            a aria-controls="large-meeting" data-toggle="tab" href="#large-meeting" role="tab"
+              .panel.panel-default
+                .panel-body
+                  h4 ベトナム進出への道海外進出「超」基礎セミナー
+
+          li.col-sm-6 role="presentation" 
+            a aria-controls="small-meeting" data-toggle="tab" href="#small-meeting" role="tab"
+              .panel.panel-default
+                .panel-body
+                  h4 ショートセミナー＆交流会
+
+        .tab-content
+          #large-meeting.tab-pane role="tabpanel"  ...1
+          #small-meeting.tab-pane role="tabpanel"  ...2
+      #main-content
+        = image_tag '1.png', class: 'width-100'
+        p ベトナム進出　さて何から始めよう！？
+
+        p ベトナム進出に関心はあるが何から始めたらよいのか
+        p わからない方を対象に、海外進出の「いろは」をお伝えします。
+
+        p 難しいお話しはあまりしません。
+        p ベトナムの習慣や歴史から、ベトナム経済の今まで
+        p ベトナムのリスクとメリットをわかりやすくお話し致します。
+
+        p 日本国内に限界を感じている方、海外進出に興味があるが
+        p 具体化ができない方向けの集りです。
+
+        p 同じ環境の仲間を知り合うチャンスでもあります。
+        p 皆で、ベトナム進出への一歩を踏み出しましょう。
+
+    .col-sm-4
+      = render 'shared/advertise'

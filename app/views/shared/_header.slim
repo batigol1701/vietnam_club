@@ -29,5 +29,6 @@ nav.navbar.navbar-default.main-navbar
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
           - Category.all.each do |cat|
-            li
+            - status = (params['controller'] == 'categories' && params['action'] == 'show' && params['id'] == cat.id.to_s) ? 'active' : ''
+            li class="#{status}"
               a href="#{category_path cat}"= cat.title

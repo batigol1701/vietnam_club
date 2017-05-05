@@ -1,0 +1,18 @@
+#category-show-vbc {
+  .nav-tabs {
+    border: none;
+  }
+
+  .panel-body {
+    min-height: 90px;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: none;
+
+    .panel-body {
+      background-color: rgba(157, 188, 89, 0.78);
+      color: white;
+    }
+  }
+}
