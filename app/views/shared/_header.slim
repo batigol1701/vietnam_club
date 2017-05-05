@@ -1,1 +1,40 @@
-h1 header
+nav.navbar.navbar-default
+  .container-fluid
+    /! Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="#{root_path}" 一般社団法人ＶｉｅｔｎａｍＣｌｕｂ
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a href="#" 
+            span.flag-icon.flag-icon-jp
+            | 日本語
+        li
+          a href="#" 
+            span.flag-icon.flag-icon-vn
+            | Tiếng việt
+        li
+          a href="#" 
+            span.flag-icon.flag-icon-gb
+            | English
+
+nav.navbar.navbar-default.main-navbar
+  .container-fluid
+    .row
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a href="#" Vietnam Bussiness Club
+          li
+            a href="#" Vietnam Foreign Student Club
+          li
+            a href="#" Adviser
+          li
+            a href="#" 会社概要
+          li
+            a href="#" 会員申請
