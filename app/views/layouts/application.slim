@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Vietnam club
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'
+
+  body
+    .container-fluid
+      .row
+        #header
+          = render 'shared/header'
+          .container
+            - if flash[:notice]
+              .alert.alert-info= notice
+            - if flash[:alert]
+              .alert.alert-danger= alert
+        #main-container
+          = yield
+        #footer
+          = render 'shared/footer'
