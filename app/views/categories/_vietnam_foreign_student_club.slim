@@ -1,0 +1,45 @@
+#category-show-vbc
+  .row
+    .col-sm-8
+      .col-sm-12
+      #tab-list.row
+        /! Nav tabs
+        ul.nav.nav-tabs role="tablist" 
+          li.col-sm-6 role="presentation"
+            a aria-controls="large-meeting" data-toggle="tab" href="#large-meeting" role="tab"
+              .panel.panel-default
+                .panel-body
+                  h4 ベトナム留学生向け就職支援セミナー
+
+          li.col-sm-6 role="presentation" 
+            a aria-controls="small-meeting" data-toggle="tab" href="#small-meeting" role="tab"
+              .panel.panel-default
+                .panel-body
+                  h4 仕事を探す
+
+        .tab-content.col-sm-12
+          #large-meeting.tab-pane role="tabpanel" 
+            .list-group
+              a.list-group-item data-target="#list-first-item" data-toggle="modal" type="button" 
+                h4.list-group-item-heading 就職支援セミナー　～先輩の声～
+                p.list-group-item-text 日本式の就職活動のタイミングと
+            #list-first-item.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+              .modal-dialog.modal-lg role="document" 
+                .modal-content
+                  .modal-header
+                    button.close aria-label="Close" data-dismiss="modal" type="button" 
+                      span aria-hidden="true"  &times;
+                    h4#myModalLabel.modal-title 就職支援セミナー　～先輩の声～
+                  .modal-body
+                    = image_tag '4.png', class: 'width-100'
+
+          #small-meeting.tab-pane role="tabpanel"
+            p【ご留意】
+            p 当社団は、派遣業及び紹介業は行っておりません。
+            p あくまで、企業様とベトナム人の出会いの場として当ホームページを開放しているにすぎません。
+            p ただし、失礼ながら当社団として求人票のご提出される企業様が外国人を雇用する体制（法的整備・企業内の雇入れ体制の整備など）が整っているかは確認させて頂きますの予めご理解とご協力をお願い申しあげます。
+      #main-content
+        = image_tag '3.png', class: 'width-100'
+
+    .col-sm-4
+      = render 'shared/advertise'
