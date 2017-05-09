@@ -1,6 +1,7 @@
 #category-show-vbc
   .row
     .col-sm-8
+      .col-sm-12
       #tab-list.row
         /! Nav tabs
         ul.nav.nav-tabs role="tablist" 
@@ -16,9 +17,25 @@
                 .panel-body
                   h4 ショートセミナー＆交流会
 
-        .tab-content
-          #large-meeting.tab-pane role="tabpanel"  ...1
-          #small-meeting.tab-pane role="tabpanel"  ...2
+        .tab-content.col-sm-12
+          #large-meeting.tab-pane role="tabpanel" 
+            .list-group
+              a.list-group-item data-target="#list-first-item" data-toggle="modal" type="button" 
+                h4.list-group-item-heading ベトナムの「今」を知り、 ビジネスの「未来」を考える
+                p.list-group-item-text 対日感情は良好だが、“親日国”という過剰な思い込みは禁 物です
+            #list-first-item.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+              .modal-dialog.modal-lg role="document" 
+                .modal-content
+                  .modal-header
+                    button.close aria-label="Close" data-dismiss="modal" type="button" 
+                      span aria-hidden="true"  &times;
+                    h4#myModalLabel.modal-title ベトナムの「今」を知り、 ビジネスの「未来」を考える
+                  .modal-body
+                    = image_tag '2.png', class: 'width-100'
+                  .modal-footer
+                    a.btn.btn-primary href="/pdf/register.pdf" 申込フォーム
+
+          #small-meeting.tab-pane role="tabpanel" 情報まだございません。
       #main-content
         = image_tag '1.png', class: 'width-100'
         p ベトナム進出　さて何から始めよう！？
