@@ -30,6 +30,11 @@ body {
   }
 }
 
+.container {
+  max-width: none !important; 
+  width: 1170px;
+}
+
 #main-container {
   margin-bottom: 50px;
 }
