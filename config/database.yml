@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: vietnam_club_production
+  database: vietnam_club_development
   pool: 5
   username: postgres
   password:
@@ -16,7 +16,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: vietnam_club_development
+  database: vietnam_club_production
   pool: 5
   username: postgres
   password:
