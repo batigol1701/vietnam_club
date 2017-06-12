@@ -6,15 +6,11 @@
         p 〒535-0031
         p 大阪市旭区高殿6丁目1番22号
         p グローバル人材育成センター内
-        p ＴＥＬ06（6766）5200
+        p Tel 06(6956)4115
+        p E-mail vnclub.j@mail.com
     .col-sm-8.footer-buttons-group
-      .col-sm-3
-        a.btn.btn-default href="#" role="button" Vietnam Business Club
-      .col-sm-3
-        a.btn.btn-default href="#" role="button" Vietnam Foreign students Club
-      .col-sm-3
-        a.btn.btn-default href="#" role="button" Adviser
-      .col-sm-3
-        a.btn.btn-default href="#" role="button" 会社概要
+      - Category.all.each do |cat|
+        .button-wrap
+          a.btn.btn-default href="#" role="button"= cat.title
     .col-sm-12.text-right
       small Copyright © 2016 ＶｉｅｔｎａｍＣｌｕｂ. All Rights Reserved.
