@@ -8,6 +8,16 @@
     color: white;
     background-color: #e75353;
   }
+
+  a.navbar-brand {
+    .image-brand-header, .brand-name-text {
+      display: inline-block;
+    }
+
+    .brand-name-text {
+      margin-left: 10px;
+    }
+  }
 }
 
 .main-navbar{
