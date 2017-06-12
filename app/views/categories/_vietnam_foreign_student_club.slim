@@ -44,9 +44,10 @@
       - if @vfsc_contents.present? 
         - @vfsc_contents.each do |content|
           .col-sm-12
-            .panel-heading
-              h3.panel-title= content.title
-            .panel-body
-              p= simple_format content.body
+            .panel.panel-warning
+              .panel-heading
+                h3.panel-title= content.title
+              .panel-body
+                p= simple_format content.body
     .col-sm-4
       = render 'shared/advertise'
