@@ -1,56 +1,106 @@
 #category-show-vbc
   .row
     .col-sm-8
-      #tab-list.row
-        /! Nav tabs
-        ul.nav.nav-tabs role="tablist" 
-          li.col-sm-6 role="presentation"
-            a aria-controls="large-meeting" data-toggle="tab" href="#large-meeting" role="tab"
-              .panel.panel-default
-                .panel-body
-                  h4 ベトナム進出への道海外進出「超」基礎セミナー
-
-          li.col-sm-6 role="presentation" 
-            a aria-controls="small-meeting" data-toggle="tab" href="#small-meeting" role="tab"
-              .panel.panel-default
-                .panel-body
-                  h4 ショートセミナー＆交流会
-
-        .tab-content.col-sm-12
-          #large-meeting.tab-pane role="tabpanel" 
-            .list-group
-              a.list-group-item data-target="#list-first-item" data-toggle="modal" type="button" 
-                h4.list-group-item-heading ベトナムの「今」を知り、 ビジネスの「未来」を考える
-                p.list-group-item-text 対日感情は良好だが、“親日国”という過剰な思い込みは禁 物です
-            #list-first-item.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
-              .modal-dialog.modal-lg role="document" 
-                .modal-content
-                  .modal-header
-                    button.close aria-label="Close" data-dismiss="modal" type="button" 
-                      span aria-hidden="true"  &times;
-                    h4#myModalLabel.modal-title ベトナムの「今」を知り、 ビジネスの「未来」を考える
-                  .modal-body
-                    = image_tag '2.png', class: 'width-100'
-                  .modal-footer
-                    a.btn.btn-primary href="/pdf/register.pdf" 申込フォーム
-
-          #small-meeting.tab-pane role="tabpanel" 情報まだございません。
-      #main-content
-        = image_tag '1.png', class: 'width-100'
-        p ベトナム進出　さて何から始めよう！？
-
-        p ベトナム進出に関心はあるが何から始めたらよいのか
-        p わからない方を対象に、海外進出の「いろは」をお伝えします。
-
-        p 難しいお話しはあまりしません。
-        p ベトナムの習慣や歴史から、ベトナム経済の今まで
-        p ベトナムのリスクとメリットをわかりやすくお話し致します。
-
-        p 日本国内に限界を感じている方、海外進出に興味があるが
-        p 具体化ができない方向けの集りです。
-
-        p 同じ環境の仲間を知り合うチャンスでもあります。
-        p 皆で、ベトナム進出への一歩を踏み出しましょう。
-
+      .col-sm-6
+        a.btn-primary data-target="#bussinessClub1" data-toggle="modal" type="button" 
+          .well.well-lg.text-center.btn-primary.background-inherit
+            h4「留学生」翻訳サービス
+        /! Modal
+        #bussinessClub1.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+          .modal-dialog role="document" 
+            .modal-content
+              .modal-header
+                button.close aria-label="Close" data-dismiss="modal" type="button" 
+                  span aria-hidden="true"  &times;
+                h4#myModalLabel.modal-title
+              .modal-body
+                .panel.panel-primary
+                  .panel-heading
+                    h3.panel-title 「留学生」翻訳サービス
+                  .panel-body
+                    p= image_tag '8.png', class: 'width-100'
+              .modal-footer
+                button.btn.btn-default data-dismiss="modal" type="button"  Close
+      .col-sm-6
+        a.btn-primary data-target="#bussinessClub2" data-toggle="modal" type="button" 
+          .well.well-lg.text-center.btn-primary.background-inherit
+            h4「留学生」告知サービス
+        /! Modal
+        #bussinessClub2.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+          .modal-dialog role="document" 
+            .modal-content
+              .modal-header
+                button.close aria-label="Close" data-dismiss="modal" type="button" 
+                  span aria-hidden="true"  &times;
+                h4#myModalLabel.modal-title 
+              .modal-body
+                .panel.panel-primary
+                  .panel-heading
+                    h3.panel-title「留学生」告知サービス
+                  .panel-body
+                    p= image_tag '9.png', class: 'width-100'
+              .modal-footer
+                button.btn.btn-default data-dismiss="modal" type="button"  Close
+      .col-sm-6
+        a.btn-primary data-target="#bussinessClub3" data-toggle="modal" type="button" 
+          .well.well-lg.text-center.btn-primary.background-inherit
+            h4 ベトナムの「今」お役立ち情報
+        /! Modal
+        #bussinessClub3.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+          .modal-dialog role="document" 
+            .modal-content
+              .modal-header
+                button.close aria-label="Close" data-dismiss="modal" type="button" 
+                  span aria-hidden="true"  &times;
+                h4#myModalLabel.modal-title Modal title
+              .modal-body
+                - if @home_events.present?
+                  .panel.panel-primary
+                    .panel-heading
+                      h3.panel-title= @home_events.title
+                    .panel-body
+                      p= simple_format @home_events.body
+              .modal-footer
+                button.btn.btn-default data-dismiss="modal" type="button"  Close
+      .col-sm-6
+        a.btn-primary data-target="#bussinessClub4" data-toggle="modal" type="button" 
+          .well.well-lg.text-center.btn-primary.background-inherit
+            h4 よろずメール相談
+        /! Modal
+        #bussinessClub4.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+          .modal-dialog role="document" 
+            .modal-content
+              .modal-header
+                button.close aria-label="Close" data-dismiss="modal" type="button" 
+                  span aria-hidden="true"  &times;
+                h4#myModalLabel.modal-title Modal title
+              .modal-body
+                .panel.panel-primary
+                  .panel-heading
+                    h3.panel-title よろずメール相談
+                  .panel-body
+                    p= image_tag '10.png', class: 'width-100'
+              .modal-footer
+                button.btn.btn-default data-dismiss="modal" type="button"  Close
+      .col-sm-6
+        a.btn-primary data-target="#bussinessClub5" data-toggle="modal" type="button" 
+          .well.well-lg.text-center.btn-primary.background-inherit
+            h4 Vietnam Discussion
+        /! Modal
+        #bussinessClub5.modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+          .modal-dialog role="document" 
+            .modal-content
+              .modal-header
+                button.close aria-label="Close" data-dismiss="modal" type="button" 
+                  span aria-hidden="true"  &times;
+                h4#myModalLabel.modal-title
+              .modal-body
+                .panel.panel-primary
+                  .panel-heading
+                    h3.panel-title Vietnam Discussion
+                  .panel-body
+                    p= image_tag '11.png', class: 'width-100'
+              .modal-footer
+                button.btn.btn-default data-dismiss="modal" type="button"  Close
     .col-sm-4
       = render 'shared/advertise'
