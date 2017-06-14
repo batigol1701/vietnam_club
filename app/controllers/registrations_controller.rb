@@ -8,11 +8,17 @@ class RegistrationsController < Devise::RegistrationsController
     @resource = Member.new
   end
 
+  def new_student
+    @resource = Student.new
+  end
+
   def create
     # add custom create logic here
     @resource = build_resource(sign_up_params)
     if params['commit'] == 'Register as Member'
       @resource.becomes!(Member)
+    elsif params['commit'] == 'Register as Student'
+      @resource.becomes!(Student)
     end
     # build_resource(sign_up_params)
     @resource.save
@@ -43,7 +49,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(:email, :register_date, :invoice, :enterprise_name, :address, :full_name, :position, :department, :tel, :fax, :url, :other, :gender)
+      u.permit(:email, :register_date, :invoice, :enterprise_name, :address, :full_name, :position, :department, :tel, :fax, :url, :other, :gender, :birthday, :school_name, :education)
     end
   end
 end 

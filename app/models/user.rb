@@ -5,6 +5,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
+  def is_member?
+    return self.type == 'Member'
+  end
+
+  def is_student?
+    return self.type == 'Student'
+  end
   protected
 
   def password_required?
