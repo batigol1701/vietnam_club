@@ -71,3 +71,31 @@ body {
 .background-inherit {
   background-color: inherit !important;
 }
+.custom-form {
+  select.date {
+    display: inline-block;
+    width: 30%;
+    max-width: 100px;
+  }
+
+  label.custom-label {
+    text-align: left;
+  }
+
+  span.radio {
+    display: inline-block;
+    margin-right: 10px;
+    input {
+      height: 20px;
+      box-shadow: 0 0 0;
+    }
+  }
+
+  table {
+    .form-group {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
