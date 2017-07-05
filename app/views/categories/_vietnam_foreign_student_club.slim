@@ -42,7 +42,7 @@
               .modal-footer
                 button.btn.btn-default data-dismiss="modal" type="button"  Close
       - if @vfsc_contents.present? 
-        - @vfsc_contents.each do |content|
+        - @vfsc_contents.order(id: :asc).each do |content|
           .col-sm-12
             .panel.panel-warning
               .panel-heading
