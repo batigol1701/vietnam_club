@@ -47,6 +47,10 @@ body {
   width: 64px;
 }
 
+.width-100-px {
+  width: 100px;
+}
+
 .nav-tabs  {
   .panel {
     margin-bottom: 0;
@@ -98,4 +102,8 @@ body {
       margin-bottom: 0;
     }
   }
+}
+
+.panel-title {
+  font-weight: 700;
 }
