@@ -3,6 +3,10 @@
     h1.text-center 賛助会員入会申込書
     h4 一般社団法人 Vietnam Club
     h4 代表理事　村上 福壽郎　殿
+  - elsif resource.is_student?
+    h1.text-center 学生会員入会申込書
+    h4 一般社団法人 Vietnam Club
+    h4 代表理事　村上 福壽郎　殿
   = f.error_notification
   = f.input :register_date, wrapper: :horizontal_form, label: '申　込　日'
   - if resource.is_member?
