@@ -49,5 +49,8 @@
                 h3.panel-title= content.title
               .panel-body
                 p= simple_format content.body
+                - if content.title != "セミナー・イベント情報"
+                  p 
+                    a.btn.btn-default href="#{new_student_path}" 学生会員入会のご案内
     .col-sm-4
       = render 'shared/advertise'
