@@ -1,12 +1,29 @@
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal custom-form' }) do |f|
+  - if resource.is_member?
+    h1.text-center 賛助会員入会申込書
+    h4 一般社団法人 Vietnam Club
+    h4 代表理事　村上 福壽郎　殿
   = f.error_notification
   = f.input :register_date, wrapper: :horizontal_form, label: '申　込　日'
   - if resource.is_member?
     .form-group
       label.col-sm-2.control-label.custom-label  賛 助 会 員
       .col-sm-10 
-        h4 24,000円
-    = f.input :invoice, wrapper: :horizontal_form, as: :radio_buttons, collection: [['必要', true], ['不要', false]], label: '領収書発行'
+        h4 2,000円/月
+    / = f.input :invoice, wrapper: :horizontal_form, as: :radio_buttons, collection: [['必要', true], ['不要', false]], label: '領収書発行'
+    .form-group.radio_buttons.optional.user_invoice
+      label.col-sm-2.control-label.custom-label.radio_buttons.optional 領収書発行
+      .col-sm-10
+        input name="user[invoice]" type="hidden" value=""
+        span.radio
+          label for="user_invoice_true" 
+            input#user_invoice_true.form-control.radio_buttons.optional name="user[invoice]" type="radio" value="true"
+            span 必要
+        span.radio
+          label for="user_invoice_false" 
+            input#user_invoice_false.form-control.radio_buttons.optional name="user[invoice]" readonly="readonly" type="radio" value="false"
+            span 不要
+
   .form-group
     label.col-sm-2.control-label.custom-label  申 込 情 報
   - if resource.is_member?
@@ -38,7 +55,7 @@
         tr
           td 通信欄
           td colspan="2"= f.input :other, label: false, input_html: { class: 'table-input' }
-    = f.button :submit, "Register as Member"
+    = f.button :submit, "登録"
   - elsif resource.is_student?
     table.table.table-bordered
       tbody

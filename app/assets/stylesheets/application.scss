@@ -88,10 +88,16 @@ body {
 
   span.radio {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 50px;
     input {
       height: 20px;
+      line-height: 20px;
       box-shadow: 0 0 0;
+    }
+
+    span {
+      position: relative;
+      right: -15px;
     }
   }
 
