@@ -56,12 +56,12 @@
                   span aria-hidden="true"  &times;
                 h4#myModalLabel.modal-title
               .modal-body
-                - if @home_events.present?
+                - if @about_vietnam.present?
                   .panel.panel-primary
                     .panel-heading
-                      h3.panel-title= @home_events.title
+                      h3.panel-title= @about_vietnam.title
                     .panel-body
-                      p= simple_format @home_events.body
+                      p= simple_format @about_vietnam.body
               .modal-footer
                 button.btn.btn-default data-dismiss="modal" type="button" 閉じる
                 a.btn.btn-default href="#" type="button" 問合せ
