@@ -20,7 +20,8 @@
                   .panel-body
                     p= image_tag '8.png', class: 'width-100'
               .modal-footer
-                button.btn.btn-default data-dismiss="modal" type="button"  Close
+                button.btn.btn-default data-dismiss="modal" type="button" 閉じる
+                a.btn.btn-default href="#" type="button" 問合せ
       .col-sm-6
         a.btn-primary data-target="#bussinessClub2" data-toggle="modal" type="button" 
           .well.well-lg.text-center.btn-primary.background-inherit
@@ -40,7 +41,8 @@
                   .panel-body
                     p= image_tag '9.png', class: 'width-100'
               .modal-footer
-                button.btn.btn-default data-dismiss="modal" type="button"  Close
+                button.btn.btn-default data-dismiss="modal" type="button" 閉じる
+                a.btn.btn-default href="#" type="button" 問合せ
       .col-sm-6
         a.btn-primary data-target="#bussinessClub3" data-toggle="modal" type="button" 
           .well.well-lg.text-center.btn-primary.background-inherit
@@ -52,7 +54,7 @@
               .modal-header
                 button.close aria-label="Close" data-dismiss="modal" type="button" 
                   span aria-hidden="true"  &times;
-                h4#myModalLabel.modal-title Modal title
+                h4#myModalLabel.modal-title
               .modal-body
                 - if @home_events.present?
                   .panel.panel-primary
@@ -61,7 +63,8 @@
                     .panel-body
                       p= simple_format @home_events.body
               .modal-footer
-                button.btn.btn-default data-dismiss="modal" type="button"  Close
+                button.btn.btn-default data-dismiss="modal" type="button" 閉じる
+                a.btn.btn-default href="#" type="button" 問合せ
       .col-sm-6
         a.btn-primary data-target="#bussinessClub4" data-toggle="modal" type="button" 
           .well.well-lg.text-center.btn-primary.background-inherit
@@ -73,7 +76,7 @@
               .modal-header
                 button.close aria-label="Close" data-dismiss="modal" type="button" 
                   span aria-hidden="true"  &times;
-                h4#myModalLabel.modal-title Modal title
+                h4#myModalLabel.modal-title
               .modal-body
                 .panel.panel-primary
                   .panel-heading
@@ -81,7 +84,8 @@
                   .panel-body
                     p= image_tag '10.png', class: 'width-100'
               .modal-footer
-                button.btn.btn-default data-dismiss="modal" type="button"  Close
+                button.btn.btn-default data-dismiss="modal" type="button" 閉じる
+                a.btn.btn-default href="#" type="button" 問合せ
       .col-sm-6
         a.btn-primary data-target="#bussinessClub5" data-toggle="modal" type="button" 
           .well.well-lg.text-center.btn-primary.background-inherit
@@ -101,6 +105,7 @@
                   .panel-body
                     p= image_tag '11.png', class: 'width-100'
               .modal-footer
-                button.btn.btn-default data-dismiss="modal" type="button"  Close
+                button.btn.btn-default data-dismiss="modal" type="button" 閉じる
+                a.btn.btn-default href="#" type="button" 問合せ
     .col-sm-4
       = render 'shared/advertise'
