@@ -15,9 +15,9 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     # add custom create logic here
     @resource = build_resource(sign_up_params)
-    if params['commit'] == 'Register as Member'
+    if params['user']['school_year'].nil?
       @resource.becomes!(Member)
-    elsif params['commit'] == 'Register as Student'
+    else
       @resource.becomes!(Student)
     end
     # build_resource(sign_up_params)
