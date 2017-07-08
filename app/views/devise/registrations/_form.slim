@@ -148,7 +148,16 @@
           td.col-sm-2.text-center 性別
         tr
           td = f.input :enterprise_name, label: false, input_html: { class: 'table-input' }
-          td 男 ・ 女
+          td
+            input name="user[gender]" type="hidden" value=""
+            span.radio
+              label for="user_invoice_true" 
+                input#user_invoice_true.form-control.radio_buttons.optional name="user[gender]" type="radio" value="男"
+                span 男
+            span.radio
+              label for="user_invoice_false" 
+                input#user_invoice_false.form-control.radio_buttons.optional name="user[gender]" readonly="readonly" type="radio" value="女"
+                span 女
         tr
           td 生年月日
           td colspan="2"= f.input :birthday, label: false

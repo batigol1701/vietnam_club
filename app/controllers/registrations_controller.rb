@@ -49,7 +49,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(:email, :register_date, :invoice, :enterprise_name, :address, :full_name, :position, :department, :tel, :fax, :url, :other, :gender, :birthday, :school_name, :education)
+      u.permit(:email, :register_date, :invoice, :enterprise_name, :address, :full_name, :position, :department, :tel, :fax, :url, :other, :gender, :birthday, :school_name, :education, :vocal, :school_year)
     end
   end
 end 
