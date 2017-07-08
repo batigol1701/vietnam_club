@@ -11,6 +11,7 @@
     .col-sm-8.footer-buttons-group
       - Category.all.each do |cat|
         .button-wrap
-          a.btn.btn-default href="#" role="button"= cat.title
+          a.btn.btn-default href="#{category_path cat}" role="button"
+            span= cat.title
     .col-sm-12.text-right
       small Copyright © 2016 ＶｉｅｔｎａｍＣｌｕｂ. All Rights Reserved.

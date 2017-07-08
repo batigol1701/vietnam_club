@@ -8,8 +8,14 @@
   .footer-buttons-group {
     a {
       width: 100%;
-      height: 50px;
+      height: 55px;
       white-space: pre-line;
+      display: table;
+    }
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }
